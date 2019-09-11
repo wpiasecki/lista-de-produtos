@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { ListaProdutosComponent } from './lista-produtos.component';
+import { ProdutoComponent } from '../produto/produto.component';
+import { PaginadorComponent } from '../paginador/paginador.component';
 
 describe('ListaProdutosComponent', () => {
   let component: ListaProdutosComponent;
@@ -8,7 +11,12 @@ describe('ListaProdutosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListaProdutosComponent ]
+      declarations: [ 
+        ListaProdutosComponent, 
+        ProdutoComponent, 
+        PaginadorComponent 
+      ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   }));
@@ -22,4 +30,5 @@ describe('ListaProdutosComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

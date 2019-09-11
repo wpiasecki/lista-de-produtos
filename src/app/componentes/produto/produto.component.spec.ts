@@ -16,10 +16,22 @@ describe('ProdutoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProdutoComponent);
     component = fixture.componentInstance;
+    component.produto = {
+      id: '1',
+      price: 1000,
+      name: '',
+      description: '',
+      pictureUrl: ''
+    }
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should format number with zeroes', () => {
+    expect(component.formatarPreco(1000)).toEqual('R$ 1.000,00');
+  });
+  
 });

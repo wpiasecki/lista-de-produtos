@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { Produto } from './produto.model';
+import { ProdutoPagina } from '../model/produto.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class BuscaProdutoService {
 
   constructor(private http: HttpClient) { }
 
-  get produtos(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(BuscaProdutoService.ENDPOINT);
+  get produtos(): Observable<ProdutoPagina> {
+    return this.http.get<ProdutoPagina>(BuscaProdutoService.ENDPOINT);
   }
 }

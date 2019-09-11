@@ -1,8 +1,8 @@
-<div class="col produto">
+<div class="produto">
   <div class="thumbnail">
     <img class="thumbnail" src="{{ produto.pictureUrl }}">
   </div>
   <div class="titulo">{{ produto.name }}</div>
   <div class="descricao">{{ produto.description }}</div>
-  <div class="preco">R$ {{ produto.price }}</div>
+  <div class="preco">{{ formatarPreco(produto.price) }}</div>
 </div>

@@ -10,10 +10,15 @@ import { Produto } from '../../modelo/produto.model';
 export class ProdutoComponent implements OnInit {
 
   @Input() produto: Produto;
-
+  static FORMATTER = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+  
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  formatarPreco(preco) {
+    return ProdutoComponent.FORMATTER.format(preco);
   }
 
 }

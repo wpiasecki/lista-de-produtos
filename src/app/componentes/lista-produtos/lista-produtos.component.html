@@ -2,9 +2,11 @@
 
 <app-paginador [pagina]="pagina"></app-paginador>
 
-<div *ngIf="pagina">
-  <app-produto 
-    [produto]="produto"
-    *ngFor="let produto of pagina.items">
-  </app-produto>
+<div *ngIf="pagina" class="lista-produtos">
+  <div class="row">
+    <app-produto 
+      [produto]="produto"
+      *ngFor="let produto of pagina.items">
+    </app-produto>
+  </div>
 </div>

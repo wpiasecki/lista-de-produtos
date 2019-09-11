@@ -1,0 +1,29 @@
+div.thumbnail {
+  > img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+div.produto {
+  border-top: 1px solid #c0c0c0;
+  padding: 1em;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+}
+
+div.titulo {
+  font-weight: bold;
+}
+
+div.descricao {
+  font-size: 0.8em;
+}
+
+div.preco {
+  font-weight: bold;
+  color: #933;
+}
+
+

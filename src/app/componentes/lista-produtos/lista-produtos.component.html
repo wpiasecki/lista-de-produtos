@@ -1,5 +1,10 @@
-<p>lista-produtos works!</p>
+<h1>Lista de produtos</h1>
 
-<app-paginador></app-paginador>
+<app-paginador [pagina]="pagina"></app-paginador>
 
-{{ pagina | json }}
+<div *ngIf="pagina">
+  <app-produto 
+    [produto]="produto"
+    *ngFor="let produto of pagina.items">
+  </app-produto>
+</div>

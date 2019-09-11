@@ -17,7 +17,9 @@ export class PaginadorComponent implements OnInit {
   }
   
   get paginas () {
-    return [1, 2, 3]
+    return Array.from(
+      { length: this.produtoPagina.totalPages }, 
+      (x, i) => i + 1);
   }
   
   isPaginaAtual (pagina) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BuscaProdutoService } from '../busca-produto.service';
+import { Produto } from '../produto.model';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -8,7 +9,7 @@ import { BuscaProdutoService } from '../busca-produto.service';
 })
 export class ListaProdutosComponent implements OnInit {
 
-  lista;
+  lista: Produto[];
 
   constructor(private buscaProdutoService: BuscaProdutoService) { }
 

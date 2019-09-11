@@ -1,5 +1,6 @@
 div.paginador {
   text-align: right;
+  margin: 1px;
 }
 
 div.pagina {
@@ -10,9 +11,9 @@ div.pagina {
   &.numerada {
     border: 1px solid #999;
     background-color: #c0c0c0;
-    margin: 0px 1em;
-    padding: 0.2em 0.6em;
-    
+    width: 32px;
+    text-align: center;
+    margin: 0px 0.5em 0.5em 0.5em;
     
     &.selecionada {
       border: 1px solid #900;

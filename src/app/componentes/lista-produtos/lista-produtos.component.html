@@ -1,12 +1,16 @@
 <h1>Lista de produtos</h1>
 
-<app-paginador [pagina]="pagina"></app-paginador>
+<div *ngIf="produtoPagina">
+  <app-paginador [produtoPagina]="produtoPagina"></app-paginador>
 
-<div *ngIf="pagina" class="lista-produtos">
-  <div class="row">
-    <app-produto 
-      [produto]="produto"
-      *ngFor="let produto of pagina.items">
-    </app-produto>
+  <div class="lista-produtos">
+    <div class="row">
+      <app-produto 
+        [produto]="produto"
+        *ngFor="let produto of produtoPagina.items">
+      </app-produto>
+    </div>
   </div>
+
+  <app-paginador [produtoPagina]="produtoPagina"></app-paginador>
 </div>

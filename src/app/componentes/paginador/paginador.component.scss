@@ -1,0 +1,23 @@
+div.paginador {
+  text-align: right;
+}
+
+div.pagina {
+  display: inline-block;
+  color: #666;
+  font-size: 0.9em;
+  
+  &.numerada {
+    border: 1px solid #999;
+    background-color: #c0c0c0;
+    margin: 0px 1em;
+    padding: 0.2em 0.6em;
+    
+    
+    &.selecionada {
+      border: 1px solid #900;
+      background-color: #a44;
+      color: white;
+    }
+  }
+}

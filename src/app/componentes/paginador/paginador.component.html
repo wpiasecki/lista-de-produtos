@@ -1,1 +1,10 @@
-<p>paginador works!</p>
+<div class="paginador">
+  <div class="pagina">Anterior</div>
+  <div 
+    *ngFor="let pagina of paginas" 
+    class="pagina numerada"
+    [ngClass]="{ selecionada: isPaginaAtual(pagina) }">
+      {{ pagina }}
+  </div>
+  <div class="pagina">Próxima</div>
+</div>

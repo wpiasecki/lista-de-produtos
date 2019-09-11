@@ -9,11 +9,19 @@ import { ProdutoPagina } from '../../modelo/produto.model';
 })
 export class PaginadorComponent implements OnInit {
   
-  @Input() pagina: ProdutoPagina;
+  @Input() produtoPagina: ProdutoPagina;
   
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  get paginas () {
+    return [1, 2, 3]
+  }
+  
+  isPaginaAtual (pagina) {
+    return pagina === this.produtoPagina.page;
   }
 
 }

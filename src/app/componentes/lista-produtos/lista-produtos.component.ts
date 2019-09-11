@@ -9,13 +9,13 @@ import { ProdutoPagina } from '../../modelo/produto.model';
 })
 export class ListaProdutosComponent implements OnInit {
 
-  pagina: ProdutoPagina;
+  produtoPagina: ProdutoPagina;
 
   constructor(private buscaProdutoService: BuscaProdutoService) { }
 
   ngOnInit() {
     this.buscaProdutoService.produtos.subscribe(
-      result => this.pagina = result);
+      result => this.produtoPagina = result);
   }
 
 }
